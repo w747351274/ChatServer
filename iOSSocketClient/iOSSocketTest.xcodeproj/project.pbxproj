@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 		BA3211DA2169066D00C2BE79 /* libcommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA3211D92169066D00C2BE79 /* libcommon.a */; };
 		BA3211DF216907B300C2BE79 /* chat_client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA3211DD216907B300C2BE79 /* chat_client.cpp */; };
 		BA3413DB216B812B00C430C7 /* chat_service.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA3413D9216B812B00C430C7 /* chat_service.cpp */; };
+		BA62A5FE216D98240079628A /* chat.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = BA62A5FB216D98240079628A /* chat.pb.cc */; };
+		BA62A5FF216D98240079628A /* chat.proto in Resources */ = {isa = PBXBuildFile; fileRef = BA62A5FD216D98240079628A /* chat.proto */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,9 @@
 		BA3211E12169189800C2BE79 /* chat_message.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = chat_message.hpp; sourceTree = "<group>"; };
 		BA3413D9216B812B00C430C7 /* chat_service.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = chat_service.cpp; sourceTree = "<group>"; };
 		BA3413DA216B812B00C430C7 /* chat_service.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = chat_service.hpp; sourceTree = "<group>"; };
+		BA62A5FB216D98240079628A /* chat.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chat.pb.cc; sourceTree = "<group>"; };
+		BA62A5FC216D98240079628A /* chat.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chat.pb.h; sourceTree = "<group>"; };
+		BA62A5FD216D98240079628A /* chat.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = chat.proto; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +99,7 @@
 		BA3211DB2169074300C2BE79 /* chat_client */ = {
 			isa = PBXGroup;
 			children = (
+				BA62A5FA216D98240079628A /* protocol */,
 				BA3211E12169189800C2BE79 /* chat_message.hpp */,
 				BA3211DD216907B300C2BE79 /* chat_client.cpp */,
 				BA3211DE216907B300C2BE79 /* chat_client.hpp */,
@@ -101,6 +107,16 @@
 				BA3413DA216B812B00C430C7 /* chat_service.hpp */,
 			);
 			path = chat_client;
+			sourceTree = "<group>";
+		};
+		BA62A5FA216D98240079628A /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BA62A5FB216D98240079628A /* chat.pb.cc */,
+				BA62A5FC216D98240079628A /* chat.pb.h */,
+				BA62A5FD216D98240079628A /* chat.proto */,
+			);
+			path = protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,11 +150,12 @@
 				TargetAttributes = {
 					BA320F0321675B5000C2BE79 = {
 						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = BA320EFF21675B5000C2BE79 /* Build configuration list for PBXProject "iOSSocketTest" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -160,6 +177,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA62A5FF216D98240079628A /* chat.proto in Resources */,
 				BA320F1421675B5300C2BE79 /* LaunchScreen.storyboard in Resources */,
 				BA320F1121675B5300C2BE79 /* Assets.xcassets in Resources */,
 				BA320F0F21675B5000C2BE79 /* Main.storyboard in Resources */,
@@ -175,6 +193,7 @@
 			files = (
 				BA320F0C21675B5000C2BE79 /* ViewController.mm in Sources */,
 				BA3413DB216B812B00C430C7 /* chat_service.cpp in Sources */,
+				BA62A5FE216D98240079628A /* chat.pb.cc in Sources */,
 				BA320F1721675B5300C2BE79 /* main.m in Sources */,
 				BA3211DF216907B300C2BE79 /* chat_client.cpp in Sources */,
 				BA320F0921675B5000C2BE79 /* AppDelegate.m in Sources */,
@@ -324,10 +343,7 @@
 				HEADER_SEARCH_PATHS = $SOURCE_ROOT/;
 				INFOPLIST_FILE = iOSSocketTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jianglei.iOSSocketTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -343,10 +359,7 @@
 				HEADER_SEARCH_PATHS = $SOURCE_ROOT/;
 				INFOPLIST_FILE = iOSSocketTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jianglei.iOSSocketTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
