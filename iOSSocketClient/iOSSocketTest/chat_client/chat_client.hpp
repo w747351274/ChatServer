@@ -24,7 +24,7 @@ typedef std::deque<chat_message> chat_message_queue;
 
 class chat_client {
 public:
-    boost::signals2::signal<void (const char* msg)> recieveMessage;
+    boost::signals2::signal<void (const std::string& msg)> recieveMessage;
     chat_client(boost::asio::io_context& io_context,
                 tcp::resolver::results_type endpoints)
     : io_context_(io_context),

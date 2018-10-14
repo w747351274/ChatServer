@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextView *textViewMsg;
+@property (weak, nonatomic) IBOutlet UITextField *txtMsg;
+- (IBAction)actionSendMsg:(id)sender;
 
 - (IBAction)actionGetTime:(id)sender;
 - (IBAction)actionEcho:(id)sender;

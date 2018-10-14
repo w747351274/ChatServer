@@ -9,8 +9,8 @@
 #include "chat_service.hpp"
 #include <iostream>
 
-void chat_service::chatMsgReceive(const char * msg){
-    std::cout << "chatMsgReceive ->" << *msg << std::endl;
+void chat_service::chatMsgReceive(const std::string &msg){
+    std::cout << "chatMsgReceive ->" << msg << std::endl;
 }
 
 chat_service::chat_service():resolver_(io_context_){
@@ -40,4 +40,7 @@ chat_service::~ chat_service() {
     c_c_->recieveMessage.disconnect(boost::bind(&chat_service::chatMsgReceive, this,_1));
     delete c_c_;
     t_ -> join();
+}
+void chat_service::write(const chat_message& msg){
+    c_c_ ->write(msg);
 }

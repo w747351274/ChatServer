@@ -29,6 +29,18 @@ using boost::asio::ip::tcp ;
 
 }
 
+- (IBAction)actionSendMsg:(id)sender {
+    NSString *strLine = self.txtMsg.text;
+    const char * line = [strLine cStringUsingEncoding:NSUTF8StringEncoding];
+    
+    size_t len = std::strlen(line);
+    chat_message msg;
+    msg.body_length(len);
+    std::memcpy(msg.body(), line, msg.body_length());
+    msg.encode_header();
+    chatService->write(msg);
+}
+
 - (IBAction)actionGetTime:(id)sender {
     try {
         boost::asio::io_service io_service;
