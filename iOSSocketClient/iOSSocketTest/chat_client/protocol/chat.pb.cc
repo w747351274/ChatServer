@@ -19,10 +19,6 @@
 #endif
 // @@protoc_insertion_point(includes)
 
-namespace com {
-namespace tencent {
-namespace mars {
-namespace sample {
 namespace chat {
 namespace proto {
 class SendMessageRequestDefaultTypeInternal {
@@ -37,20 +33,16 @@ class SendMessageResponseDefaultTypeInternal {
 } _SendMessageResponse_default_instance_;
 }  // namespace proto
 }  // namespace chat
-}  // namespace sample
-}  // namespace mars
-}  // namespace tencent
-}  // namespace com
 namespace protobuf_chat_2eproto {
 static void InitDefaultsSendMessageRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::com::tencent::mars::sample::chat::proto::_SendMessageRequest_default_instance_;
-    new (ptr) ::com::tencent::mars::sample::chat::proto::SendMessageRequest();
+    void* ptr = &::chat::proto::_SendMessageRequest_default_instance_;
+    new (ptr) ::chat::proto::SendMessageRequest();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::com::tencent::mars::sample::chat::proto::SendMessageRequest::InitAsDefaultInstance();
+  ::chat::proto::SendMessageRequest::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<0> scc_info_SendMessageRequest =
@@ -60,11 +52,11 @@ static void InitDefaultsSendMessageResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::com::tencent::mars::sample::chat::proto::_SendMessageResponse_default_instance_;
-    new (ptr) ::com::tencent::mars::sample::chat::proto::SendMessageResponse();
+    void* ptr = &::chat::proto::_SendMessageResponse_default_instance_;
+    new (ptr) ::chat::proto::SendMessageResponse();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::com::tencent::mars::sample::chat::proto::SendMessageResponse::InitAsDefaultInstance();
+  ::chat::proto::SendMessageResponse::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<0> scc_info_SendMessageResponse =
@@ -79,45 +71,35 @@ void InitDefaults() {
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::tencent::mars::sample::chat::proto::SendMessageRequest, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::tencent::mars::sample::chat::proto::SendMessageRequest, _internal_metadata_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::chat::proto::SendMessageRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::tencent::mars::sample::chat::proto::SendMessageRequest, access_token_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::tencent::mars::sample::chat::proto::SendMessageRequest, from_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::tencent::mars::sample::chat::proto::SendMessageRequest, to_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::tencent::mars::sample::chat::proto::SendMessageRequest, text_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::tencent::mars::sample::chat::proto::SendMessageRequest, topic_),
-  0,
-  1,
-  2,
-  3,
-  4,
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::tencent::mars::sample::chat::proto::SendMessageResponse, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::tencent::mars::sample::chat::proto::SendMessageResponse, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::chat::proto::SendMessageRequest, access_token_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::chat::proto::SendMessageRequest, from_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::chat::proto::SendMessageRequest, to_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::chat::proto::SendMessageRequest, text_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::chat::proto::SendMessageRequest, topic_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::chat::proto::SendMessageResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::tencent::mars::sample::chat::proto::SendMessageResponse, err_code_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::tencent::mars::sample::chat::proto::SendMessageResponse, err_msg_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::tencent::mars::sample::chat::proto::SendMessageResponse, from_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::tencent::mars::sample::chat::proto::SendMessageResponse, text_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::tencent::mars::sample::chat::proto::SendMessageResponse, topic_),
-  4,
-  0,
-  1,
-  2,
-  3,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::chat::proto::SendMessageResponse, err_code_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::chat::proto::SendMessageResponse, err_msg_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::chat::proto::SendMessageResponse, from_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::chat::proto::SendMessageResponse, text_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::chat::proto::SendMessageResponse, topic_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 10, sizeof(::com::tencent::mars::sample::chat::proto::SendMessageRequest)},
-  { 15, 25, sizeof(::com::tencent::mars::sample::chat::proto::SendMessageResponse)},
+  { 0, -1, sizeof(::chat::proto::SendMessageRequest)},
+  { 10, -1, sizeof(::chat::proto::SendMessageResponse)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::com::tencent::mars::sample::chat::proto::_SendMessageRequest_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::com::tencent::mars::sample::chat::proto::_SendMessageResponse_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::chat::proto::_SendMessageRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::chat::proto::_SendMessageResponse_default_instance_),
 };
 
 void protobuf_AssignDescriptors() {
@@ -141,17 +123,16 @@ void protobuf_RegisterTypes(const ::std::string&) {
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\nchat.proto\022\"com.tencent.mars.sample.ch"
-      "at.proto\"a\n\022SendMessageRequest\022\024\n\014access"
-      "_token\030\001 \002(\t\022\014\n\004from\030\002 \002(\t\022\n\n\002to\030\003 \002(\t\022\014"
-      "\n\004text\030\004 \002(\t\022\r\n\005topic\030\005 \002(\t\"\216\001\n\023SendMess"
-      "ageResponse\022\020\n\010err_code\030\001 \002(\005\022\017\n\007err_msg"
-      "\030\002 \002(\t\022\014\n\004from\030\003 \002(\t\022\014\n\004text\030\004 \002(\t\022\r\n\005to"
-      "pic\030\005 \002(\t\")\n\005Error\022\n\n\006ERR_OK\020\000\022\024\n\007ERR_SY"
-      "S\020\377\377\377\377\377\377\377\377\377\001"
+      "\n\nchat.proto\022\nchat.proto\"a\n\022SendMessageR"
+      "equest\022\024\n\014access_token\030\001 \001(\t\022\014\n\004from\030\002 \001"
+      "(\t\022\n\n\002to\030\003 \001(\t\022\014\n\004text\030\004 \001(\t\022\r\n\005topic\030\005 "
+      "\001(\t\"\216\001\n\023SendMessageResponse\022\020\n\010err_code\030"
+      "\001 \001(\005\022\017\n\007err_msg\030\002 \001(\t\022\014\n\004from\030\003 \001(\t\022\014\n\004"
+      "text\030\004 \001(\t\022\r\n\005topic\030\005 \001(\t\")\n\005Error\022\n\n\006ER"
+      "R_OK\020\000\022\024\n\007ERR_SYS\020\377\377\377\377\377\377\377\377\377\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 292);
+      descriptor, 276);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "chat.proto", &protobuf_RegisterTypes);
 }
@@ -167,10 +148,6 @@ struct StaticDescriptorInitializer {
   }
 } static_descriptor_initializer;
 }  // namespace protobuf_chat_2eproto
-namespace com {
-namespace tencent {
-namespace mars {
-namespace sample {
 namespace chat {
 namespace proto {
 const ::google::protobuf::EnumDescriptor* SendMessageResponse_Error_descriptor() {
@@ -212,34 +189,33 @@ SendMessageRequest::SendMessageRequest()
   ::google::protobuf::internal::InitSCC(
       &protobuf_chat_2eproto::scc_info_SendMessageRequest.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:com.tencent.mars.sample.chat.proto.SendMessageRequest)
+  // @@protoc_insertion_point(constructor:chat.proto.SendMessageRequest)
 }
 SendMessageRequest::SendMessageRequest(const SendMessageRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   access_token_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_access_token()) {
+  if (from.access_token().size() > 0) {
     access_token_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.access_token_);
   }
   from_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_from()) {
+  if (from.from().size() > 0) {
     from_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.from_);
   }
   to_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_to()) {
+  if (from.to().size() > 0) {
     to_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.to_);
   }
   text_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_text()) {
+  if (from.text().size() > 0) {
     text_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.text_);
   }
   topic_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_topic()) {
+  if (from.topic().size() > 0) {
     topic_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.topic_);
   }
-  // @@protoc_insertion_point(copy_constructor:com.tencent.mars.sample.chat.proto.SendMessageRequest)
+  // @@protoc_insertion_point(copy_constructor:chat.proto.SendMessageRequest)
 }
 
 void SendMessageRequest::SharedCtor() {
@@ -251,7 +227,7 @@ void SendMessageRequest::SharedCtor() {
 }
 
 SendMessageRequest::~SendMessageRequest() {
-  // @@protoc_insertion_point(destructor:com.tencent.mars.sample.chat.proto.SendMessageRequest)
+  // @@protoc_insertion_point(destructor:chat.proto.SendMessageRequest)
   SharedDtor();
 }
 
@@ -278,30 +254,16 @@ const SendMessageRequest& SendMessageRequest::default_instance() {
 
 
 void SendMessageRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:com.tencent.mars.sample.chat.proto.SendMessageRequest)
+// @@protoc_insertion_point(message_clear_start:chat.proto.SendMessageRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 31u) {
-    if (cached_has_bits & 0x00000001u) {
-      access_token_.ClearNonDefaultToEmptyNoArena();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      from_.ClearNonDefaultToEmptyNoArena();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      to_.ClearNonDefaultToEmptyNoArena();
-    }
-    if (cached_has_bits & 0x00000008u) {
-      text_.ClearNonDefaultToEmptyNoArena();
-    }
-    if (cached_has_bits & 0x00000010u) {
-      topic_.ClearNonDefaultToEmptyNoArena();
-    }
-  }
-  _has_bits_.Clear();
+  access_token_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  from_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  to_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  text_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  topic_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   _internal_metadata_.Clear();
 }
 
@@ -309,86 +271,86 @@ bool SendMessageRequest::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:com.tencent.mars.sample.chat.proto.SendMessageRequest)
+  // @@protoc_insertion_point(parse_start:chat.proto.SendMessageRequest)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required string access_token = 1;
+      // string access_token = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_access_token()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->access_token().data(), static_cast<int>(this->access_token().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "com.tencent.mars.sample.chat.proto.SendMessageRequest.access_token");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "chat.proto.SendMessageRequest.access_token"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // required string from = 2;
+      // string from = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_from()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->from().data(), static_cast<int>(this->from().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "com.tencent.mars.sample.chat.proto.SendMessageRequest.from");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "chat.proto.SendMessageRequest.from"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // required string to = 3;
+      // string to = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_to()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->to().data(), static_cast<int>(this->to().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "com.tencent.mars.sample.chat.proto.SendMessageRequest.to");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "chat.proto.SendMessageRequest.to"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // required string text = 4;
+      // string text = 4;
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_text()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->text().data(), static_cast<int>(this->text().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "com.tencent.mars.sample.chat.proto.SendMessageRequest.text");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "chat.proto.SendMessageRequest.text"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // required string topic = 5;
+      // string topic = 5;
       case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_topic()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->topic().data(), static_cast<int>(this->topic().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "com.tencent.mars.sample.chat.proto.SendMessageRequest.topic");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "chat.proto.SendMessageRequest.topic"));
         } else {
           goto handle_unusual;
         }
@@ -407,296 +369,255 @@ bool SendMessageRequest::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:com.tencent.mars.sample.chat.proto.SendMessageRequest)
+  // @@protoc_insertion_point(parse_success:chat.proto.SendMessageRequest)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:com.tencent.mars.sample.chat.proto.SendMessageRequest)
+  // @@protoc_insertion_point(parse_failure:chat.proto.SendMessageRequest)
   return false;
 #undef DO_
 }
 
 void SendMessageRequest::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:com.tencent.mars.sample.chat.proto.SendMessageRequest)
+  // @@protoc_insertion_point(serialize_start:chat.proto.SendMessageRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
-  // required string access_token = 1;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string access_token = 1;
+  if (this->access_token().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->access_token().data(), static_cast<int>(this->access_token().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "com.tencent.mars.sample.chat.proto.SendMessageRequest.access_token");
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "chat.proto.SendMessageRequest.access_token");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->access_token(), output);
   }
 
-  // required string from = 2;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string from = 2;
+  if (this->from().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->from().data(), static_cast<int>(this->from().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "com.tencent.mars.sample.chat.proto.SendMessageRequest.from");
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "chat.proto.SendMessageRequest.from");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->from(), output);
   }
 
-  // required string to = 3;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string to = 3;
+  if (this->to().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->to().data(), static_cast<int>(this->to().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "com.tencent.mars.sample.chat.proto.SendMessageRequest.to");
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "chat.proto.SendMessageRequest.to");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       3, this->to(), output);
   }
 
-  // required string text = 4;
-  if (cached_has_bits & 0x00000008u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string text = 4;
+  if (this->text().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->text().data(), static_cast<int>(this->text().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "com.tencent.mars.sample.chat.proto.SendMessageRequest.text");
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "chat.proto.SendMessageRequest.text");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       4, this->text(), output);
   }
 
-  // required string topic = 5;
-  if (cached_has_bits & 0x00000010u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string topic = 5;
+  if (this->topic().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->topic().data(), static_cast<int>(this->topic().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "com.tencent.mars.sample.chat.proto.SendMessageRequest.topic");
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "chat.proto.SendMessageRequest.topic");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       5, this->topic(), output);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:com.tencent.mars.sample.chat.proto.SendMessageRequest)
+  // @@protoc_insertion_point(serialize_end:chat.proto.SendMessageRequest)
 }
 
 ::google::protobuf::uint8* SendMessageRequest::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:com.tencent.mars.sample.chat.proto.SendMessageRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:chat.proto.SendMessageRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
-  // required string access_token = 1;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string access_token = 1;
+  if (this->access_token().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->access_token().data(), static_cast<int>(this->access_token().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "com.tencent.mars.sample.chat.proto.SendMessageRequest.access_token");
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "chat.proto.SendMessageRequest.access_token");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         1, this->access_token(), target);
   }
 
-  // required string from = 2;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string from = 2;
+  if (this->from().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->from().data(), static_cast<int>(this->from().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "com.tencent.mars.sample.chat.proto.SendMessageRequest.from");
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "chat.proto.SendMessageRequest.from");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         2, this->from(), target);
   }
 
-  // required string to = 3;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string to = 3;
+  if (this->to().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->to().data(), static_cast<int>(this->to().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "com.tencent.mars.sample.chat.proto.SendMessageRequest.to");
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "chat.proto.SendMessageRequest.to");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         3, this->to(), target);
   }
 
-  // required string text = 4;
-  if (cached_has_bits & 0x00000008u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string text = 4;
+  if (this->text().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->text().data(), static_cast<int>(this->text().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "com.tencent.mars.sample.chat.proto.SendMessageRequest.text");
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "chat.proto.SendMessageRequest.text");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         4, this->text(), target);
   }
 
-  // required string topic = 5;
-  if (cached_has_bits & 0x00000010u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string topic = 5;
+  if (this->topic().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->topic().data(), static_cast<int>(this->topic().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "com.tencent.mars.sample.chat.proto.SendMessageRequest.topic");
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "chat.proto.SendMessageRequest.topic");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         5, this->topic(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:com.tencent.mars.sample.chat.proto.SendMessageRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:chat.proto.SendMessageRequest)
   return target;
 }
 
-size_t SendMessageRequest::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:com.tencent.mars.sample.chat.proto.SendMessageRequest)
-  size_t total_size = 0;
-
-  if (has_access_token()) {
-    // required string access_token = 1;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->access_token());
-  }
-
-  if (has_from()) {
-    // required string from = 2;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->from());
-  }
-
-  if (has_to()) {
-    // required string to = 3;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->to());
-  }
-
-  if (has_text()) {
-    // required string text = 4;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->text());
-  }
-
-  if (has_topic()) {
-    // required string topic = 5;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->topic());
-  }
-
-  return total_size;
-}
 size_t SendMessageRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:com.tencent.mars.sample.chat.proto.SendMessageRequest)
+// @@protoc_insertion_point(message_byte_size_start:chat.proto.SendMessageRequest)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  if (((_has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
-    // required string access_token = 1;
+  // string access_token = 1;
+  if (this->access_token().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->access_token());
+  }
 
-    // required string from = 2;
+  // string from = 2;
+  if (this->from().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->from());
+  }
 
-    // required string to = 3;
+  // string to = 3;
+  if (this->to().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->to());
+  }
 
-    // required string text = 4;
+  // string text = 4;
+  if (this->text().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->text());
+  }
 
-    // required string topic = 5;
+  // string topic = 5;
+  if (this->topic().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->topic());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
 void SendMessageRequest::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:com.tencent.mars.sample.chat.proto.SendMessageRequest)
+// @@protoc_insertion_point(generalized_merge_from_start:chat.proto.SendMessageRequest)
   GOOGLE_DCHECK_NE(&from, this);
   const SendMessageRequest* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const SendMessageRequest>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:com.tencent.mars.sample.chat.proto.SendMessageRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:chat.proto.SendMessageRequest)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:com.tencent.mars.sample.chat.proto.SendMessageRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:chat.proto.SendMessageRequest)
     MergeFrom(*source);
   }
 }
 
 void SendMessageRequest::MergeFrom(const SendMessageRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:com.tencent.mars.sample.chat.proto.SendMessageRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:chat.proto.SendMessageRequest)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 31u) {
-    if (cached_has_bits & 0x00000001u) {
-      set_has_access_token();
-      access_token_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.access_token_);
-    }
-    if (cached_has_bits & 0x00000002u) {
-      set_has_from();
-      from_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.from_);
-    }
-    if (cached_has_bits & 0x00000004u) {
-      set_has_to();
-      to_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.to_);
-    }
-    if (cached_has_bits & 0x00000008u) {
-      set_has_text();
-      text_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.text_);
-    }
-    if (cached_has_bits & 0x00000010u) {
-      set_has_topic();
-      topic_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.topic_);
-    }
+  if (from.access_token().size() > 0) {
+
+    access_token_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.access_token_);
+  }
+  if (from.from().size() > 0) {
+
+    from_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.from_);
+  }
+  if (from.to().size() > 0) {
+
+    to_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.to_);
+  }
+  if (from.text().size() > 0) {
+
+    text_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.text_);
+  }
+  if (from.topic().size() > 0) {
+
+    topic_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.topic_);
   }
 }
 
 void SendMessageRequest::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:com.tencent.mars.sample.chat.proto.SendMessageRequest)
+// @@protoc_insertion_point(generalized_copy_from_start:chat.proto.SendMessageRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void SendMessageRequest::CopyFrom(const SendMessageRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:com.tencent.mars.sample.chat.proto.SendMessageRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:chat.proto.SendMessageRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 bool SendMessageRequest::IsInitialized() const {
-  if ((_has_bits_[0] & 0x0000001f) != 0x0000001f) return false;
   return true;
 }
 
@@ -716,7 +637,6 @@ void SendMessageRequest::InternalSwap(SendMessageRequest* other) {
     GetArenaNoVirtual());
   topic_.Swap(&other->topic_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
@@ -743,31 +663,30 @@ SendMessageResponse::SendMessageResponse()
   ::google::protobuf::internal::InitSCC(
       &protobuf_chat_2eproto::scc_info_SendMessageResponse.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:com.tencent.mars.sample.chat.proto.SendMessageResponse)
+  // @@protoc_insertion_point(constructor:chat.proto.SendMessageResponse)
 }
 SendMessageResponse::SendMessageResponse(const SendMessageResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   err_msg_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_err_msg()) {
+  if (from.err_msg().size() > 0) {
     err_msg_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.err_msg_);
   }
   from_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_from()) {
+  if (from.from().size() > 0) {
     from_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.from_);
   }
   text_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_text()) {
+  if (from.text().size() > 0) {
     text_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.text_);
   }
   topic_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has_topic()) {
+  if (from.topic().size() > 0) {
     topic_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.topic_);
   }
   err_code_ = from.err_code_;
-  // @@protoc_insertion_point(copy_constructor:com.tencent.mars.sample.chat.proto.SendMessageResponse)
+  // @@protoc_insertion_point(copy_constructor:chat.proto.SendMessageResponse)
 }
 
 void SendMessageResponse::SharedCtor() {
@@ -779,7 +698,7 @@ void SendMessageResponse::SharedCtor() {
 }
 
 SendMessageResponse::~SendMessageResponse() {
-  // @@protoc_insertion_point(destructor:com.tencent.mars.sample.chat.proto.SendMessageResponse)
+  // @@protoc_insertion_point(destructor:chat.proto.SendMessageResponse)
   SharedDtor();
 }
 
@@ -805,28 +724,16 @@ const SendMessageResponse& SendMessageResponse::default_instance() {
 
 
 void SendMessageResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:com.tencent.mars.sample.chat.proto.SendMessageResponse)
+// @@protoc_insertion_point(message_clear_start:chat.proto.SendMessageResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 15u) {
-    if (cached_has_bits & 0x00000001u) {
-      err_msg_.ClearNonDefaultToEmptyNoArena();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      from_.ClearNonDefaultToEmptyNoArena();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      text_.ClearNonDefaultToEmptyNoArena();
-    }
-    if (cached_has_bits & 0x00000008u) {
-      topic_.ClearNonDefaultToEmptyNoArena();
-    }
-  }
+  err_msg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  from_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  text_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  topic_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   err_code_ = 0;
-  _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
 
@@ -834,17 +741,17 @@ bool SendMessageResponse::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:com.tencent.mars.sample.chat.proto.SendMessageResponse)
+  // @@protoc_insertion_point(parse_start:chat.proto.SendMessageResponse)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required int32 err_code = 1;
+      // int32 err_code = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
-          set_has_err_code();
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &err_code_)));
@@ -854,64 +761,64 @@ bool SendMessageResponse::MergePartialFromCodedStream(
         break;
       }
 
-      // required string err_msg = 2;
+      // string err_msg = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_err_msg()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->err_msg().data(), static_cast<int>(this->err_msg().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "com.tencent.mars.sample.chat.proto.SendMessageResponse.err_msg");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "chat.proto.SendMessageResponse.err_msg"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // required string from = 3;
+      // string from = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_from()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->from().data(), static_cast<int>(this->from().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "com.tencent.mars.sample.chat.proto.SendMessageResponse.from");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "chat.proto.SendMessageResponse.from"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // required string text = 4;
+      // string text = 4;
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_text()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->text().data(), static_cast<int>(this->text().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "com.tencent.mars.sample.chat.proto.SendMessageResponse.text");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "chat.proto.SendMessageResponse.text"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // required string topic = 5;
+      // string topic = 5;
       case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_topic()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->topic().data(), static_cast<int>(this->topic().length()),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "com.tencent.mars.sample.chat.proto.SendMessageResponse.topic");
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "chat.proto.SendMessageResponse.topic"));
         } else {
           goto handle_unusual;
         }
@@ -930,285 +837,243 @@ bool SendMessageResponse::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:com.tencent.mars.sample.chat.proto.SendMessageResponse)
+  // @@protoc_insertion_point(parse_success:chat.proto.SendMessageResponse)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:com.tencent.mars.sample.chat.proto.SendMessageResponse)
+  // @@protoc_insertion_point(parse_failure:chat.proto.SendMessageResponse)
   return false;
 #undef DO_
 }
 
 void SendMessageResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:com.tencent.mars.sample.chat.proto.SendMessageResponse)
+  // @@protoc_insertion_point(serialize_start:chat.proto.SendMessageResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
-  // required int32 err_code = 1;
-  if (cached_has_bits & 0x00000010u) {
+  // int32 err_code = 1;
+  if (this->err_code() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->err_code(), output);
   }
 
-  // required string err_msg = 2;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string err_msg = 2;
+  if (this->err_msg().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->err_msg().data(), static_cast<int>(this->err_msg().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "com.tencent.mars.sample.chat.proto.SendMessageResponse.err_msg");
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "chat.proto.SendMessageResponse.err_msg");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->err_msg(), output);
   }
 
-  // required string from = 3;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string from = 3;
+  if (this->from().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->from().data(), static_cast<int>(this->from().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "com.tencent.mars.sample.chat.proto.SendMessageResponse.from");
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "chat.proto.SendMessageResponse.from");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       3, this->from(), output);
   }
 
-  // required string text = 4;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string text = 4;
+  if (this->text().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->text().data(), static_cast<int>(this->text().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "com.tencent.mars.sample.chat.proto.SendMessageResponse.text");
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "chat.proto.SendMessageResponse.text");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       4, this->text(), output);
   }
 
-  // required string topic = 5;
-  if (cached_has_bits & 0x00000008u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string topic = 5;
+  if (this->topic().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->topic().data(), static_cast<int>(this->topic().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "com.tencent.mars.sample.chat.proto.SendMessageResponse.topic");
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "chat.proto.SendMessageResponse.topic");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       5, this->topic(), output);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:com.tencent.mars.sample.chat.proto.SendMessageResponse)
+  // @@protoc_insertion_point(serialize_end:chat.proto.SendMessageResponse)
 }
 
 ::google::protobuf::uint8* SendMessageResponse::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:com.tencent.mars.sample.chat.proto.SendMessageResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:chat.proto.SendMessageResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
-  // required int32 err_code = 1;
-  if (cached_has_bits & 0x00000010u) {
+  // int32 err_code = 1;
+  if (this->err_code() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->err_code(), target);
   }
 
-  // required string err_msg = 2;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string err_msg = 2;
+  if (this->err_msg().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->err_msg().data(), static_cast<int>(this->err_msg().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "com.tencent.mars.sample.chat.proto.SendMessageResponse.err_msg");
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "chat.proto.SendMessageResponse.err_msg");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         2, this->err_msg(), target);
   }
 
-  // required string from = 3;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string from = 3;
+  if (this->from().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->from().data(), static_cast<int>(this->from().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "com.tencent.mars.sample.chat.proto.SendMessageResponse.from");
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "chat.proto.SendMessageResponse.from");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         3, this->from(), target);
   }
 
-  // required string text = 4;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string text = 4;
+  if (this->text().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->text().data(), static_cast<int>(this->text().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "com.tencent.mars.sample.chat.proto.SendMessageResponse.text");
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "chat.proto.SendMessageResponse.text");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         4, this->text(), target);
   }
 
-  // required string topic = 5;
-  if (cached_has_bits & 0x00000008u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string topic = 5;
+  if (this->topic().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->topic().data(), static_cast<int>(this->topic().length()),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "com.tencent.mars.sample.chat.proto.SendMessageResponse.topic");
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "chat.proto.SendMessageResponse.topic");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         5, this->topic(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:com.tencent.mars.sample.chat.proto.SendMessageResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:chat.proto.SendMessageResponse)
   return target;
 }
 
-size_t SendMessageResponse::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:com.tencent.mars.sample.chat.proto.SendMessageResponse)
-  size_t total_size = 0;
-
-  if (has_err_msg()) {
-    // required string err_msg = 2;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->err_msg());
-  }
-
-  if (has_from()) {
-    // required string from = 3;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->from());
-  }
-
-  if (has_text()) {
-    // required string text = 4;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->text());
-  }
-
-  if (has_topic()) {
-    // required string topic = 5;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->topic());
-  }
-
-  if (has_err_code()) {
-    // required int32 err_code = 1;
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->err_code());
-  }
-
-  return total_size;
-}
 size_t SendMessageResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:com.tencent.mars.sample.chat.proto.SendMessageResponse)
+// @@protoc_insertion_point(message_byte_size_start:chat.proto.SendMessageResponse)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  if (((_has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
-    // required string err_msg = 2;
+  // string err_msg = 2;
+  if (this->err_msg().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->err_msg());
+  }
 
-    // required string from = 3;
+  // string from = 3;
+  if (this->from().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->from());
+  }
 
-    // required string text = 4;
+  // string text = 4;
+  if (this->text().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->text());
+  }
 
-    // required string topic = 5;
+  // string topic = 5;
+  if (this->topic().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->topic());
+  }
 
-    // required int32 err_code = 1;
+  // int32 err_code = 1;
+  if (this->err_code() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->err_code());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
 void SendMessageResponse::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:com.tencent.mars.sample.chat.proto.SendMessageResponse)
+// @@protoc_insertion_point(generalized_merge_from_start:chat.proto.SendMessageResponse)
   GOOGLE_DCHECK_NE(&from, this);
   const SendMessageResponse* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const SendMessageResponse>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:com.tencent.mars.sample.chat.proto.SendMessageResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:chat.proto.SendMessageResponse)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:com.tencent.mars.sample.chat.proto.SendMessageResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:chat.proto.SendMessageResponse)
     MergeFrom(*source);
   }
 }
 
 void SendMessageResponse::MergeFrom(const SendMessageResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:com.tencent.mars.sample.chat.proto.SendMessageResponse)
+// @@protoc_insertion_point(class_specific_merge_from_start:chat.proto.SendMessageResponse)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 31u) {
-    if (cached_has_bits & 0x00000001u) {
-      set_has_err_msg();
-      err_msg_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.err_msg_);
-    }
-    if (cached_has_bits & 0x00000002u) {
-      set_has_from();
-      from_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.from_);
-    }
-    if (cached_has_bits & 0x00000004u) {
-      set_has_text();
-      text_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.text_);
-    }
-    if (cached_has_bits & 0x00000008u) {
-      set_has_topic();
-      topic_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.topic_);
-    }
-    if (cached_has_bits & 0x00000010u) {
-      err_code_ = from.err_code_;
-    }
-    _has_bits_[0] |= cached_has_bits;
+  if (from.err_msg().size() > 0) {
+
+    err_msg_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.err_msg_);
+  }
+  if (from.from().size() > 0) {
+
+    from_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.from_);
+  }
+  if (from.text().size() > 0) {
+
+    text_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.text_);
+  }
+  if (from.topic().size() > 0) {
+
+    topic_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.topic_);
+  }
+  if (from.err_code() != 0) {
+    set_err_code(from.err_code());
   }
 }
 
 void SendMessageResponse::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:com.tencent.mars.sample.chat.proto.SendMessageResponse)
+// @@protoc_insertion_point(generalized_copy_from_start:chat.proto.SendMessageResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void SendMessageResponse::CopyFrom(const SendMessageResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:com.tencent.mars.sample.chat.proto.SendMessageResponse)
+// @@protoc_insertion_point(class_specific_copy_from_start:chat.proto.SendMessageResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 bool SendMessageResponse::IsInitialized() const {
-  if ((_has_bits_[0] & 0x0000001f) != 0x0000001f) return false;
   return true;
 }
 
@@ -1227,7 +1092,6 @@ void SendMessageResponse::InternalSwap(SendMessageResponse* other) {
   topic_.Swap(&other->topic_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   swap(err_code_, other->err_code_);
-  swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
@@ -1240,17 +1104,13 @@ void SendMessageResponse::InternalSwap(SendMessageResponse* other) {
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace proto
 }  // namespace chat
-}  // namespace sample
-}  // namespace mars
-}  // namespace tencent
-}  // namespace com
 namespace google {
 namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::com::tencent::mars::sample::chat::proto::SendMessageRequest* Arena::CreateMaybeMessage< ::com::tencent::mars::sample::chat::proto::SendMessageRequest >(Arena* arena) {
-  return Arena::CreateInternal< ::com::tencent::mars::sample::chat::proto::SendMessageRequest >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::chat::proto::SendMessageRequest* Arena::CreateMaybeMessage< ::chat::proto::SendMessageRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::chat::proto::SendMessageRequest >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::com::tencent::mars::sample::chat::proto::SendMessageResponse* Arena::CreateMaybeMessage< ::com::tencent::mars::sample::chat::proto::SendMessageResponse >(Arena* arena) {
-  return Arena::CreateInternal< ::com::tencent::mars::sample::chat::proto::SendMessageResponse >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::chat::proto::SendMessageResponse* Arena::CreateMaybeMessage< ::chat::proto::SendMessageResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::chat::proto::SendMessageResponse >(arena);
 }
 }  // namespace protobuf
 }  // namespace google
