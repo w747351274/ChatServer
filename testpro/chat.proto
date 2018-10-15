@@ -1,12 +1,12 @@
-syntax = "proto2";
-package com.tencent.mars.sample.chat.proto;
+syntax = "proto3";
+package chat.proto;
 
 message SendMessageRequest {
-    required string access_token = 1;
-    required string from = 2;
-    required string to = 3;
-    required string text = 4;
-    required string topic = 5;
+    string access_token = 1;
+    string from = 2;
+    string to = 3;
+    string text = 4;
+    string topic = 5;
 }
 
 
@@ -17,9 +17,9 @@ message SendMessageResponse {
         ERR_SYS = -1;
     }
 
-    required int32 err_code = 1;
-    required string err_msg = 2;
-    required string from = 3;
-    required string text = 4;
-    required string topic = 5;
+    int32 err_code = 1;
+    string err_msg = 2;
+    string from = 3;
+    string text = 4;
+    string topic = 5;
 }

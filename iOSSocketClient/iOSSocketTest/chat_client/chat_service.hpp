@@ -19,7 +19,7 @@ public:
     void start_chat_service();
     void stop_chat_service();
     ~chat_service();
-    void chatMsgReceive(const std::string &msg);
+    void chatMsgReceive(const SendMessageResponse& msg);
     void write(const chat_message& msg);
 private:
 

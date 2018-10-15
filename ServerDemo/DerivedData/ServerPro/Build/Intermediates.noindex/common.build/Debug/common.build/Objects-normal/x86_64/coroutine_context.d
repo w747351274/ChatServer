@@ -1,0 +1,24 @@
+dependencies: \
+  /Users/wangjianglei/Documents/Lab/ChatServer/ServerDemo/libs/coroutine/src/detail/coroutine_context.cpp \
+  /Users/wangjianglei/Documents/Lab/ChatServer/ServerDemo/boost/coroutine/detail/coroutine_context.hpp \
+  /Users/wangjianglei/Documents/Lab/ChatServer/ServerDemo/boost/assert.hpp \
+  /Users/wangjianglei/Documents/Lab/ChatServer/ServerDemo/boost/config.hpp \
+  /Users/wangjianglei/Documents/Lab/ChatServer/ServerDemo/boost/config/user.hpp \
+  /Users/wangjianglei/Documents/Lab/ChatServer/ServerDemo/boost/config/detail/select_compiler_config.hpp \
+  /Users/wangjianglei/Documents/Lab/ChatServer/ServerDemo/boost/config/compiler/clang.hpp \
+  /Users/wangjianglei/Documents/Lab/ChatServer/ServerDemo/boost/config/detail/select_stdlib_config.hpp \
+  /Users/wangjianglei/Documents/Lab/ChatServer/ServerDemo/boost/config/stdlib/libcpp.hpp \
+  /Users/wangjianglei/Documents/Lab/ChatServer/ServerDemo/boost/config/detail/select_platform_config.hpp \
+  /Users/wangjianglei/Documents/Lab/ChatServer/ServerDemo/boost/config/platform/macos.hpp \
+  /Users/wangjianglei/Documents/Lab/ChatServer/ServerDemo/boost/config/detail/posix_features.hpp \
+  /Users/wangjianglei/Documents/Lab/ChatServer/ServerDemo/boost/config/detail/suffix.hpp \
+  /Users/wangjianglei/Documents/Lab/ChatServer/ServerDemo/boost/context/detail/fcontext.hpp \
+  /Users/wangjianglei/Documents/Lab/ChatServer/ServerDemo/boost/cstdint.hpp \
+  /Users/wangjianglei/Documents/Lab/ChatServer/ServerDemo/boost/context/detail/config.hpp \
+  /Users/wangjianglei/Documents/Lab/ChatServer/ServerDemo/boost/detail/workaround.hpp \
+  /Users/wangjianglei/Documents/Lab/ChatServer/ServerDemo/boost/config/workaround.hpp \
+  /Users/wangjianglei/Documents/Lab/ChatServer/ServerDemo/boost/config/auto_link.hpp \
+  /Users/wangjianglei/Documents/Lab/ChatServer/ServerDemo/boost/coroutine/detail/config.hpp \
+  /Users/wangjianglei/Documents/Lab/ChatServer/ServerDemo/boost/coroutine/detail/preallocated.hpp \
+  /Users/wangjianglei/Documents/Lab/ChatServer/ServerDemo/boost/coroutine/stack_context.hpp \
+  /Users/wangjianglei/Documents/Lab/ChatServer/ServerDemo/boost/coroutine/detail/data.hpp

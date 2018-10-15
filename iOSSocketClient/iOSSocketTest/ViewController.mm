@@ -11,6 +11,9 @@
 #include <iostream>
 #include <boost/array.hpp>
 #include "chat_service.hpp"
+#include "chat.pb.h"
+
+using namespace chat::proto;
 
 @interface ViewController (){
     chat_service *chatService;
@@ -33,10 +36,22 @@ using boost::asio::ip::tcp ;
     NSString *strLine = self.txtMsg.text;
     const char * line = [strLine cStringUsingEncoding:NSUTF8StringEncoding];
     
-    size_t len = std::strlen(line);
     chat_message msg;
-    msg.body_length(len);
-    std::memcpy(msg.body(), line, msg.body_length());
+    msg.cmdId(3);
+    msg.seq(1002);
+    
+    SendMessageRequest sendMsgRequest;
+    sendMsgRequest.set_access_token("q111111");
+    sendMsgRequest.set_from("iphone");
+    sendMsgRequest.set_to("wjl");
+    sendMsgRequest.set_topic("test");
+    
+    sendMsgRequest.set_text(line);
+    
+    std::string serilizedStr = sendMsgRequest.SerializeAsString();
+    std::cout << "serilizedStr:" << serilizedStr <<std::endl;
+    msg.body_length(sendMsgRequest.SerializeAsString().length());
+    std::memcpy(msg.body(), serilizedStr.c_str(), msg.body_length());
     msg.encode_header();
     chatService->write(msg);
 }

@@ -16,7 +16,10 @@
 #include <utility>
 #include <boost/asio.hpp>
 #include "chat_message.hpp"
+#include "chat.pb.h"
+#include "main.pb.h"
 
+using namespace chat::proto;
 using boost::asio::ip::tcp;
 
 //----------------------------------------------------------------------
@@ -90,21 +93,80 @@ private:
         auto self(shared_from_this());
         boost::asio::async_read(socket_,
                                 boost::asio::buffer(read_msg_.data(), chat_message::header_length),
-                                [this, self](boost::system::error_code ec, std::size_t /*length*/)   {
+                                [this, self](boost::system::error_code ec, std::size_t length)   {
                                     if (!ec && read_msg_.decode_header()) {
-                                        do_read_body();
+                                        if (read_msg_.cmdId() == CMDID_NOOPING) {
+                                            handle_nooping();
+                                        } else if(read_msg_.cmdId() == proto::CMD_ID_SEND_MESSAGE){
+                                            handle_send_message();
+                                        }else if(read_msg_.cmdId() == proto::CMD_ID_HELLO){
+                                            handle_hello();
+                                        }
                                     } else {
                                         room_.leave(shared_from_this());
                                     }
                                 });
     }
-    
-    void do_read_body(){
+    void handle_nooping(){
+        auto self(shared_from_this());
+        boost::asio::async_write(socket_, boost::asio::buffer(read_msg_.data(),
+                                                              read_msg_.length()),
+                                 [this, self](boost::system::error_code ec, std::size_t /*length*/) {
+                                     if (!ec) {
+                                         do_read_header();
+                                     }else {
+                                         room_.leave(shared_from_this());
+                                     }
+                                 });
+    }
+    void handle_send_message(){
         auto self(shared_from_this());
         boost::asio::async_read(socket_,
                                 boost::asio::buffer(read_msg_.body(), read_msg_.body_length()),
                                 [this, self](boost::system::error_code ec, std::size_t /*length*/){
                                     if (!ec){
+                                        SendMessageRequest request;
+                                        request.ParseFromString(read_msg_.body());
+                                        std::cout << request.DebugString() << std::endl;
+                                        int retCode = SendMessageResponse::ERR_OK;
+                                        std::string errMsg = "congratulations, " + request.from();
+                                        SendMessageResponse response;
+                                        response.set_err_code(retCode);
+                                        response.set_err_msg(errMsg);
+                                        response.set_from(request.from());
+                                        response.set_text(request.text());
+                                        response.set_topic(request.topic());
+                                        std::string res = response.SerializeAsString();
+                                        read_msg_.body_length(res.length());
+                                        read_msg_.encode_header();
+                                        std::memcpy(read_msg_.body(), res.c_str(), read_msg_.body_length());
+                                        room_.deliver(read_msg_);
+                                        do_read_header();
+                                    } else {
+                                        room_.leave(shared_from_this());
+                                    }
+                                });
+    }
+    void handle_hello(){
+        auto self(shared_from_this());
+        boost::asio::async_read(socket_,
+                                boost::asio::buffer(read_msg_.body(), read_msg_.body_length()),
+                                [this, self](boost::system::error_code ec, std::size_t /*length*/){
+                                    if (!ec){
+                                        proto::HelloRequest request;
+                                        request.ParseFromString(read_msg_.body());
+                                        std::cout << request.DebugString() << std::endl;
+                                        int retCode = 0;
+                                        std::string errMsg = "hello mars";
+
+                                         proto::HelloResponse response;
+                                        response.set_retcode(retCode);
+                                        response.set_errmsg(errMsg);
+ 
+                                        std::string res = response.SerializeAsString();
+                                        read_msg_.body_length(res.length());
+                                        read_msg_.encode_header();
+                                        std::memcpy(read_msg_.body(), res.c_str(), read_msg_.body_length());
                                         room_.deliver(read_msg_);
                                         do_read_header();
                                     } else {
@@ -165,9 +227,9 @@ private:
 
 int chatServerMain(const char argc, const char * argv[]){
     boost::asio::io_service io_service;
-    short port = 8002;
+    short port = 8081;
     chat_server chatServer(io_service,tcp::endpoint(tcp::v4(),port));
-    std::cout << "start chatMsg  "<<boost::asio::ip::host_name()<<"listen port : 8002\n" ;
+    std::cout << "start chatMsg  "<<boost::asio::ip::host_name()<<"listen port : "<< port << "\n" ;
     io_service.run();
     return 1;
 }

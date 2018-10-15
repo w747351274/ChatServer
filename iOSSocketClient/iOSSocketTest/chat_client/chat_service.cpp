@@ -9,12 +9,12 @@
 #include "chat_service.hpp"
 #include <iostream>
 
-void chat_service::chatMsgReceive(const std::string &msg){
-    std::cout << "chatMsgReceive ->" << msg << std::endl;
+void chat_service::chatMsgReceive(const SendMessageResponse& msg){
+    msg.PrintDebugString();
 }
 
 chat_service::chat_service():resolver_(io_context_){
-    c_c_ = new  chat_client(io_context_,resolver_.resolve({"192.168.199.202","8002"}));
+    c_c_ = new  chat_client(io_context_,resolver_.resolve({"122.97.64.141","8081"}));
     c_c_-> recieveMessage.connect(boost::bind(&chat_service::chatMsgReceive, this,_1));
 }
 

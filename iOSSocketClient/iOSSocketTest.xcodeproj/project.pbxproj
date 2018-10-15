@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA06F426217B6F43002E38C2 /* messagepush.proto in Sources */ = {isa = PBXBuildFile; fileRef = BA06F420217B6F43002E38C2 /* messagepush.proto */; };
+		BA06F427217B6F43002E38C2 /* messagepush.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = BA06F421217B6F43002E38C2 /* messagepush.pb.cc */; };
+		BA06F428217B6F43002E38C2 /* main.proto in Sources */ = {isa = PBXBuildFile; fileRef = BA06F422217B6F43002E38C2 /* main.proto */; };
+		BA06F429217B6F43002E38C2 /* main.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = BA06F424217B6F43002E38C2 /* main.pb.cc */; };
 		BA320F0921675B5000C2BE79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA320F0821675B5000C2BE79 /* AppDelegate.m */; };
 		BA320F0C21675B5000C2BE79 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA320F0B21675B5000C2BE79 /* ViewController.mm */; };
 		BA320F0F21675B5000C2BE79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA320F0D21675B5000C2BE79 /* Main.storyboard */; };
@@ -21,6 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA06F420217B6F43002E38C2 /* messagepush.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = messagepush.proto; sourceTree = "<group>"; };
+		BA06F421217B6F43002E38C2 /* messagepush.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = messagepush.pb.cc; sourceTree = "<group>"; };
+		BA06F422217B6F43002E38C2 /* main.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = main.proto; sourceTree = "<group>"; };
+		BA06F423217B6F43002E38C2 /* messagepush.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = messagepush.pb.h; sourceTree = "<group>"; };
+		BA06F424217B6F43002E38C2 /* main.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.pb.cc; sourceTree = "<group>"; };
+		BA06F425217B6F43002E38C2 /* main.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.pb.h; sourceTree = "<group>"; };
 		BA320F0421675B5000C2BE79 /* iOSSocketTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSocketTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA320F0721675B5000C2BE79 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BA320F0821675B5000C2BE79 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -112,6 +122,12 @@
 		BA62A5FA216D98240079628A /* protocol */ = {
 			isa = PBXGroup;
 			children = (
+				BA06F424217B6F43002E38C2 /* main.pb.cc */,
+				BA06F425217B6F43002E38C2 /* main.pb.h */,
+				BA06F422217B6F43002E38C2 /* main.proto */,
+				BA06F421217B6F43002E38C2 /* messagepush.pb.cc */,
+				BA06F423217B6F43002E38C2 /* messagepush.pb.h */,
+				BA06F420217B6F43002E38C2 /* messagepush.proto */,
 				BA62A5FB216D98240079628A /* chat.pb.cc */,
 				BA62A5FC216D98240079628A /* chat.pb.h */,
 				BA62A5FD216D98240079628A /* chat.proto */,
@@ -192,7 +208,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA320F0C21675B5000C2BE79 /* ViewController.mm in Sources */,
+				BA06F429217B6F43002E38C2 /* main.pb.cc in Sources */,
+				BA06F428217B6F43002E38C2 /* main.proto in Sources */,
 				BA3413DB216B812B00C430C7 /* chat_service.cpp in Sources */,
+				BA06F427217B6F43002E38C2 /* messagepush.pb.cc in Sources */,
+				BA06F426217B6F43002E38C2 /* messagepush.proto in Sources */,
 				BA62A5FE216D98240079628A /* chat.pb.cc in Sources */,
 				BA320F1721675B5300C2BE79 /* main.m in Sources */,
 				BA3211DF216907B300C2BE79 /* chat_client.cpp in Sources */,

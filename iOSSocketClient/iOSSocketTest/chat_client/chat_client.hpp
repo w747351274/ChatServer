@@ -17,14 +17,16 @@
 #include <boost/asio.hpp>
 #include "chat_message.hpp"
 #include "boost/signals2.hpp"
+#include "chat.pb.h"
 
+using namespace chat::proto;
 using boost::asio::ip::tcp;
 
 typedef std::deque<chat_message> chat_message_queue;
 
 class chat_client {
 public:
-    boost::signals2::signal<void (const std::string& msg)> recieveMessage;
+    boost::signals2::signal<void (const SendMessageResponse& msg)> recieveMessage;
     chat_client(boost::asio::io_context& io_context,
                 tcp::resolver::results_type endpoints)
     : io_context_(io_context),

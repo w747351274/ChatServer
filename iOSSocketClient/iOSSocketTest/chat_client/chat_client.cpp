@@ -53,8 +53,9 @@ void chat_client::do_read_body(){
                             boost::asio::buffer(read_msg_.body(), read_msg_.body_length()),
                             [this](boost::system::error_code ec, std::size_t /*length*/) {
                                 if (!ec) {
-                                    std::string stringMsg(read_msg_.body(),read_msg_.body_length());
-                                    recieveMessage(stringMsg.c_str());
+                                    SendMessageResponse msg;
+                                    msg.ParseFromArray(read_msg_.body(), static_cast<int>(read_msg_.body_length()));
+                                    recieveMessage(msg);
                                     do_read_header();
                                 } else{
                                     socket_.close();
