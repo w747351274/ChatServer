@@ -22,16 +22,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ServerDemo/chatserver/chatServer.cpp"
-            timestampString = "561826959.458059"
+            timestampString = "562004362.143315"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
-            landmarkName = "handle_send_message()"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
+            landmarkName = "handle_hello()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>

@@ -14,19 +14,29 @@
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
+#include <stdint.h>
+#include <stdlib.h>
 
 static int CMDID_NOOPING = 6;
 static int CMDID_NOOPING_RESP = 6;
 static int CLIENTVERSION = 200;
 static int MESSAGE_PUSH = 10001;
 
+struct __STNetMsgXpHeader {
+    uint32_t    head_length;
+    uint32_t    client_version;
+    uint32_t    cmdid;
+    uint32_t    seq;
+    uint32_t    body_length;
+};
+
 class chat_message {
 public:
-    enum { header_length = 4 + 4 + 4 + 4 + 4 };
+    enum { header_length = sizeof(__STNetMsgXpHeader) };
     enum { max_body_length = 512};
     
     chat_message()
-    : body_length_(0),clientVersion_(200) {
+    : body_length_(0),clientVersion_(CLIENTVERSION) {
     }
     
     const char* data() const {
@@ -55,8 +65,6 @@ public:
     
     void body_length(std::size_t new_length) {
         body_length_ = new_length;
-        if (body_length_ > max_body_length)
-        body_length_ = max_body_length;
     }
     
     int seq() const {
@@ -85,30 +93,19 @@ public:
     
     
     bool decode_header() {
-        char headLength[4 + 1] = "";
-        char clientVersion[4 + 1] = "";
-        char cmdId[4 + 1] = "";
-        char seq[4 + 1] = "";
-        char bodyLenth[4 + 1] = "";
         
-        std::strncat(headLength, data_, 4);
-        std::strncat(clientVersion, data_+ 4, 4);
-        std::strncat(cmdId, data_ + 4 *2, 4);
-        std::strncat(seq, data_ + 4 *3, 4);
-        std::strncat(bodyLenth, data_ + 4 *4, 4);
+            __STNetMsgXpHeader st = {0};
         
-        headLength_ = std::atoi(headLength);
-        clientVersion_ = std::atoi(clientVersion);
-        cmdId_ = std::atoi(cmdId);
-        seq_ = std::atoi(seq);
-        body_length_ = std::atoi(bodyLenth);
+        memcpy(&st, data_, sizeof(__STNetMsgXpHeader));
         
+        headLength_ = ntohl(st.head_length);
+        clientVersion_ = ntohl(st.client_version);
+        cmdId_ = ntohl(st.cmdid);
+        seq_ = ntohl(st.seq);
+        body_length_ = ntohl(st.body_length);
+  
         std::cout << "headLength_ :"   << headLength_ << " clientVersion_:"  << clientVersion_  << " cmdId_:"  << cmdId_ << " seq_:" << seq_  << " bodyLenth_:" << body_length_ << std::endl;
-        
-        if (body_length_ > max_body_length) {
-            body_length_ = 0;
-            return false;
-        }
+ 
         return true;
     }
     
@@ -117,25 +114,14 @@ public:
             return;
         }
         
-        char headLength[4 + 1] = "";
-        std::sprintf(headLength , "%4d", static_cast<int>(header_length));
-        std::memcpy(data_, headLength , 4);
+        __STNetMsgXpHeader st = {0};
+        st.head_length = htonl(sizeof(__STNetMsgXpHeader));
+        st.client_version = htonl(CLIENTVERSION);
+        st.cmdid = htonl(cmdId_);
+        st.seq = htonl(seq_);
+        st.body_length = htonl(body_length_);
         
-        char clientVersion[4 + 1] = "";
-        std::sprintf(clientVersion , "%4d", static_cast<int>(200));
-        std::memcpy(data_ +4, clientVersion , 4);
-        
-        char cmdId[4 + 1] = "";
-        std::sprintf(cmdId , "%4d", static_cast<int>(cmdId_));
-        std::memcpy(data_ + 4*2, cmdId , 4);
-        
-        char seq[4 + 1] = "";
-        std::sprintf(seq , "%4d", static_cast<int>(seq_));
-        std::memcpy(data_+ 4*3, seq, 4);
-        
-        char body_length[4 + 1] = "";
-        std::sprintf(body_length , "%4d", static_cast<int>(body_length_));
-        std::memcpy(data_+ 4*4, body_length , 4);
+        memcpy(data_, &st, sizeof(__STNetMsgXpHeader));
     }
     
 private:

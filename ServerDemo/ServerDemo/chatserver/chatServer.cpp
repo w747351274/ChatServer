@@ -99,6 +99,8 @@ private:
                                             handle_nooping();
                                         } else if(read_msg_.cmdId() == proto::CMD_ID_SEND_MESSAGE){
                                             handle_send_message();
+                                        }else if(read_msg_.cmdId() == 8){
+                                            handle_hello2();
                                         }else if(read_msg_.cmdId() == proto::CMD_ID_HELLO){
                                             handle_hello();
                                         }
@@ -110,7 +112,7 @@ private:
     void handle_nooping(){
         auto self(shared_from_this());
         boost::asio::async_write(socket_, boost::asio::buffer(read_msg_.data(),
-                                                              read_msg_.length()),
+                                                              read_msg_.header_length),
                                  [this, self](boost::system::error_code ec, std::size_t /*length*/) {
                                      if (!ec) {
                                          do_read_header();
@@ -148,6 +150,33 @@ private:
                                 });
     }
     void handle_hello(){
+        auto self(shared_from_this());
+        boost::asio::async_read(socket_,
+                                boost::asio::buffer(read_msg_.body(), read_msg_.body_length()),
+                                [this, self](boost::system::error_code ec, std::size_t /*length*/){
+                                    if (!ec){
+                                        proto::HelloRequest request;
+                                        request.ParseFromString(read_msg_.body());
+                                        std::cout << request.DebugString() << std::endl;
+                                        int retCode = 0;
+                                        std::string errMsg = "congratulations, "+ request.user();
+                                        
+                                        proto::HelloResponse response;
+                                        response.set_retcode(retCode);
+                                        response.set_errmsg(errMsg);
+                                        
+                                        std::string res = response.SerializeAsString();
+                                        read_msg_.body_length(res.length());
+                                        read_msg_.encode_header();
+                                        std::memcpy(read_msg_.body(), res.c_str(), read_msg_.body_length());
+                                        room_.deliver(read_msg_);
+                                        do_read_header();
+                                    } else {
+                                        room_.leave(shared_from_this());
+                                    }
+                                });
+    }
+    void handle_hello2(){
         auto self(shared_from_this());
         boost::asio::async_read(socket_,
                                 boost::asio::buffer(read_msg_.body(), read_msg_.body_length()),
