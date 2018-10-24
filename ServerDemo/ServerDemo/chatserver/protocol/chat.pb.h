@@ -67,9 +67,7 @@ namespace proto {
 
 enum SendMessageResponse_Error {
   SendMessageResponse_Error_ERR_OK = 0,
-  SendMessageResponse_Error_ERR_SYS = -1,
-  SendMessageResponse_Error_SendMessageResponse_Error_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
-  SendMessageResponse_Error_SendMessageResponse_Error_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
+  SendMessageResponse_Error_ERR_SYS = -1
 };
 bool SendMessageResponse_Error_IsValid(int value);
 const SendMessageResponse_Error SendMessageResponse_Error_Error_MIN = SendMessageResponse_Error_ERR_SYS;
@@ -114,6 +112,13 @@ class SendMessageRequest : public ::google::protobuf::Message /* @@protoc_insert
     return *this;
   }
   #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
   static const ::google::protobuf::Descriptor* descriptor();
   static const SendMessageRequest& default_instance();
 
@@ -175,7 +180,8 @@ class SendMessageRequest : public ::google::protobuf::Message /* @@protoc_insert
 
   // accessors -------------------------------------------------------
 
-  // string access_token = 1;
+  // required string access_token = 1;
+  bool has_access_token() const;
   void clear_access_token();
   static const int kAccessTokenFieldNumber = 1;
   const ::std::string& access_token() const;
@@ -189,7 +195,8 @@ class SendMessageRequest : public ::google::protobuf::Message /* @@protoc_insert
   ::std::string* release_access_token();
   void set_allocated_access_token(::std::string* access_token);
 
-  // string from = 2;
+  // required string from = 2;
+  bool has_from() const;
   void clear_from();
   static const int kFromFieldNumber = 2;
   const ::std::string& from() const;
@@ -203,7 +210,8 @@ class SendMessageRequest : public ::google::protobuf::Message /* @@protoc_insert
   ::std::string* release_from();
   void set_allocated_from(::std::string* from);
 
-  // string to = 3;
+  // required string to = 3;
+  bool has_to() const;
   void clear_to();
   static const int kToFieldNumber = 3;
   const ::std::string& to() const;
@@ -217,7 +225,8 @@ class SendMessageRequest : public ::google::protobuf::Message /* @@protoc_insert
   ::std::string* release_to();
   void set_allocated_to(::std::string* to);
 
-  // string text = 4;
+  // required string text = 4;
+  bool has_text() const;
   void clear_text();
   static const int kTextFieldNumber = 4;
   const ::std::string& text() const;
@@ -231,7 +240,8 @@ class SendMessageRequest : public ::google::protobuf::Message /* @@protoc_insert
   ::std::string* release_text();
   void set_allocated_text(::std::string* text);
 
-  // string topic = 5;
+  // required string topic = 5;
+  bool has_topic() const;
   void clear_topic();
   static const int kTopicFieldNumber = 5;
   const ::std::string& topic() const;
@@ -247,14 +257,28 @@ class SendMessageRequest : public ::google::protobuf::Message /* @@protoc_insert
 
   // @@protoc_insertion_point(class_scope:chat.proto.SendMessageRequest)
  private:
+  void set_has_access_token();
+  void clear_has_access_token();
+  void set_has_from();
+  void clear_has_from();
+  void set_has_to();
+  void clear_has_to();
+  void set_has_text();
+  void clear_has_text();
+  void set_has_topic();
+  void clear_has_topic();
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
   ::google::protobuf::internal::ArenaStringPtr access_token_;
   ::google::protobuf::internal::ArenaStringPtr from_;
   ::google::protobuf::internal::ArenaStringPtr to_;
   ::google::protobuf::internal::ArenaStringPtr text_;
   ::google::protobuf::internal::ArenaStringPtr topic_;
-  mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_chat_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -285,6 +309,13 @@ class SendMessageResponse : public ::google::protobuf::Message /* @@protoc_inser
     return *this;
   }
   #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
   static const ::google::protobuf::Descriptor* descriptor();
   static const SendMessageResponse& default_instance();
 
@@ -372,7 +403,8 @@ class SendMessageResponse : public ::google::protobuf::Message /* @@protoc_inser
 
   // accessors -------------------------------------------------------
 
-  // string err_msg = 2;
+  // required string err_msg = 2;
+  bool has_err_msg() const;
   void clear_err_msg();
   static const int kErrMsgFieldNumber = 2;
   const ::std::string& err_msg() const;
@@ -386,7 +418,8 @@ class SendMessageResponse : public ::google::protobuf::Message /* @@protoc_inser
   ::std::string* release_err_msg();
   void set_allocated_err_msg(::std::string* err_msg);
 
-  // string from = 3;
+  // required string from = 3;
+  bool has_from() const;
   void clear_from();
   static const int kFromFieldNumber = 3;
   const ::std::string& from() const;
@@ -400,7 +433,8 @@ class SendMessageResponse : public ::google::protobuf::Message /* @@protoc_inser
   ::std::string* release_from();
   void set_allocated_from(::std::string* from);
 
-  // string text = 4;
+  // required string text = 4;
+  bool has_text() const;
   void clear_text();
   static const int kTextFieldNumber = 4;
   const ::std::string& text() const;
@@ -414,7 +448,8 @@ class SendMessageResponse : public ::google::protobuf::Message /* @@protoc_inser
   ::std::string* release_text();
   void set_allocated_text(::std::string* text);
 
-  // string topic = 5;
+  // required string topic = 5;
+  bool has_topic() const;
   void clear_topic();
   static const int kTopicFieldNumber = 5;
   const ::std::string& topic() const;
@@ -428,7 +463,8 @@ class SendMessageResponse : public ::google::protobuf::Message /* @@protoc_inser
   ::std::string* release_topic();
   void set_allocated_topic(::std::string* topic);
 
-  // int32 err_code = 1;
+  // required int32 err_code = 1;
+  bool has_err_code() const;
   void clear_err_code();
   static const int kErrCodeFieldNumber = 1;
   ::google::protobuf::int32 err_code() const;
@@ -436,14 +472,28 @@ class SendMessageResponse : public ::google::protobuf::Message /* @@protoc_inser
 
   // @@protoc_insertion_point(class_scope:chat.proto.SendMessageResponse)
  private:
+  void set_has_err_code();
+  void clear_has_err_code();
+  void set_has_err_msg();
+  void clear_has_err_msg();
+  void set_has_from();
+  void clear_has_from();
+  void set_has_text();
+  void clear_has_text();
+  void set_has_topic();
+  void clear_has_topic();
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
   ::google::protobuf::internal::ArenaStringPtr err_msg_;
   ::google::protobuf::internal::ArenaStringPtr from_;
   ::google::protobuf::internal::ArenaStringPtr text_;
   ::google::protobuf::internal::ArenaStringPtr topic_;
   ::google::protobuf::int32 err_code_;
-  mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_chat_2eproto::TableStruct;
 };
 // ===================================================================
@@ -457,22 +507,32 @@ class SendMessageResponse : public ::google::protobuf::Message /* @@protoc_inser
 #endif  // __GNUC__
 // SendMessageRequest
 
-// string access_token = 1;
+// required string access_token = 1;
+inline bool SendMessageRequest::has_access_token() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void SendMessageRequest::set_has_access_token() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void SendMessageRequest::clear_has_access_token() {
+  _has_bits_[0] &= ~0x00000001u;
+}
 inline void SendMessageRequest::clear_access_token() {
   access_token_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_access_token();
 }
 inline const ::std::string& SendMessageRequest::access_token() const {
   // @@protoc_insertion_point(field_get:chat.proto.SendMessageRequest.access_token)
   return access_token_.GetNoArena();
 }
 inline void SendMessageRequest::set_access_token(const ::std::string& value) {
-  
+  set_has_access_token();
   access_token_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:chat.proto.SendMessageRequest.access_token)
 }
 #if LANG_CXX11
 inline void SendMessageRequest::set_access_token(::std::string&& value) {
-  
+  set_has_access_token();
   access_token_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:chat.proto.SendMessageRequest.access_token)
@@ -480,52 +540,65 @@ inline void SendMessageRequest::set_access_token(::std::string&& value) {
 #endif
 inline void SendMessageRequest::set_access_token(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+  set_has_access_token();
   access_token_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:chat.proto.SendMessageRequest.access_token)
 }
 inline void SendMessageRequest::set_access_token(const char* value, size_t size) {
-  
+  set_has_access_token();
   access_token_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:chat.proto.SendMessageRequest.access_token)
 }
 inline ::std::string* SendMessageRequest::mutable_access_token() {
-  
+  set_has_access_token();
   // @@protoc_insertion_point(field_mutable:chat.proto.SendMessageRequest.access_token)
   return access_token_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* SendMessageRequest::release_access_token() {
   // @@protoc_insertion_point(field_release:chat.proto.SendMessageRequest.access_token)
-  
-  return access_token_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (!has_access_token()) {
+    return NULL;
+  }
+  clear_has_access_token();
+  return access_token_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void SendMessageRequest::set_allocated_access_token(::std::string* access_token) {
   if (access_token != NULL) {
-    
+    set_has_access_token();
   } else {
-    
+    clear_has_access_token();
   }
   access_token_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), access_token);
   // @@protoc_insertion_point(field_set_allocated:chat.proto.SendMessageRequest.access_token)
 }
 
-// string from = 2;
+// required string from = 2;
+inline bool SendMessageRequest::has_from() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void SendMessageRequest::set_has_from() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void SendMessageRequest::clear_has_from() {
+  _has_bits_[0] &= ~0x00000002u;
+}
 inline void SendMessageRequest::clear_from() {
   from_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_from();
 }
 inline const ::std::string& SendMessageRequest::from() const {
   // @@protoc_insertion_point(field_get:chat.proto.SendMessageRequest.from)
   return from_.GetNoArena();
 }
 inline void SendMessageRequest::set_from(const ::std::string& value) {
-  
+  set_has_from();
   from_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:chat.proto.SendMessageRequest.from)
 }
 #if LANG_CXX11
 inline void SendMessageRequest::set_from(::std::string&& value) {
-  
+  set_has_from();
   from_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:chat.proto.SendMessageRequest.from)
@@ -533,52 +606,65 @@ inline void SendMessageRequest::set_from(::std::string&& value) {
 #endif
 inline void SendMessageRequest::set_from(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+  set_has_from();
   from_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:chat.proto.SendMessageRequest.from)
 }
 inline void SendMessageRequest::set_from(const char* value, size_t size) {
-  
+  set_has_from();
   from_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:chat.proto.SendMessageRequest.from)
 }
 inline ::std::string* SendMessageRequest::mutable_from() {
-  
+  set_has_from();
   // @@protoc_insertion_point(field_mutable:chat.proto.SendMessageRequest.from)
   return from_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* SendMessageRequest::release_from() {
   // @@protoc_insertion_point(field_release:chat.proto.SendMessageRequest.from)
-  
-  return from_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (!has_from()) {
+    return NULL;
+  }
+  clear_has_from();
+  return from_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void SendMessageRequest::set_allocated_from(::std::string* from) {
   if (from != NULL) {
-    
+    set_has_from();
   } else {
-    
+    clear_has_from();
   }
   from_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from);
   // @@protoc_insertion_point(field_set_allocated:chat.proto.SendMessageRequest.from)
 }
 
-// string to = 3;
+// required string to = 3;
+inline bool SendMessageRequest::has_to() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void SendMessageRequest::set_has_to() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void SendMessageRequest::clear_has_to() {
+  _has_bits_[0] &= ~0x00000004u;
+}
 inline void SendMessageRequest::clear_to() {
   to_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_to();
 }
 inline const ::std::string& SendMessageRequest::to() const {
   // @@protoc_insertion_point(field_get:chat.proto.SendMessageRequest.to)
   return to_.GetNoArena();
 }
 inline void SendMessageRequest::set_to(const ::std::string& value) {
-  
+  set_has_to();
   to_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:chat.proto.SendMessageRequest.to)
 }
 #if LANG_CXX11
 inline void SendMessageRequest::set_to(::std::string&& value) {
-  
+  set_has_to();
   to_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:chat.proto.SendMessageRequest.to)
@@ -586,52 +672,65 @@ inline void SendMessageRequest::set_to(::std::string&& value) {
 #endif
 inline void SendMessageRequest::set_to(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+  set_has_to();
   to_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:chat.proto.SendMessageRequest.to)
 }
 inline void SendMessageRequest::set_to(const char* value, size_t size) {
-  
+  set_has_to();
   to_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:chat.proto.SendMessageRequest.to)
 }
 inline ::std::string* SendMessageRequest::mutable_to() {
-  
+  set_has_to();
   // @@protoc_insertion_point(field_mutable:chat.proto.SendMessageRequest.to)
   return to_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* SendMessageRequest::release_to() {
   // @@protoc_insertion_point(field_release:chat.proto.SendMessageRequest.to)
-  
-  return to_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (!has_to()) {
+    return NULL;
+  }
+  clear_has_to();
+  return to_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void SendMessageRequest::set_allocated_to(::std::string* to) {
   if (to != NULL) {
-    
+    set_has_to();
   } else {
-    
+    clear_has_to();
   }
   to_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), to);
   // @@protoc_insertion_point(field_set_allocated:chat.proto.SendMessageRequest.to)
 }
 
-// string text = 4;
+// required string text = 4;
+inline bool SendMessageRequest::has_text() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void SendMessageRequest::set_has_text() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void SendMessageRequest::clear_has_text() {
+  _has_bits_[0] &= ~0x00000008u;
+}
 inline void SendMessageRequest::clear_text() {
   text_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_text();
 }
 inline const ::std::string& SendMessageRequest::text() const {
   // @@protoc_insertion_point(field_get:chat.proto.SendMessageRequest.text)
   return text_.GetNoArena();
 }
 inline void SendMessageRequest::set_text(const ::std::string& value) {
-  
+  set_has_text();
   text_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:chat.proto.SendMessageRequest.text)
 }
 #if LANG_CXX11
 inline void SendMessageRequest::set_text(::std::string&& value) {
-  
+  set_has_text();
   text_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:chat.proto.SendMessageRequest.text)
@@ -639,52 +738,65 @@ inline void SendMessageRequest::set_text(::std::string&& value) {
 #endif
 inline void SendMessageRequest::set_text(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+  set_has_text();
   text_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:chat.proto.SendMessageRequest.text)
 }
 inline void SendMessageRequest::set_text(const char* value, size_t size) {
-  
+  set_has_text();
   text_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:chat.proto.SendMessageRequest.text)
 }
 inline ::std::string* SendMessageRequest::mutable_text() {
-  
+  set_has_text();
   // @@protoc_insertion_point(field_mutable:chat.proto.SendMessageRequest.text)
   return text_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* SendMessageRequest::release_text() {
   // @@protoc_insertion_point(field_release:chat.proto.SendMessageRequest.text)
-  
-  return text_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (!has_text()) {
+    return NULL;
+  }
+  clear_has_text();
+  return text_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void SendMessageRequest::set_allocated_text(::std::string* text) {
   if (text != NULL) {
-    
+    set_has_text();
   } else {
-    
+    clear_has_text();
   }
   text_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), text);
   // @@protoc_insertion_point(field_set_allocated:chat.proto.SendMessageRequest.text)
 }
 
-// string topic = 5;
+// required string topic = 5;
+inline bool SendMessageRequest::has_topic() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void SendMessageRequest::set_has_topic() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void SendMessageRequest::clear_has_topic() {
+  _has_bits_[0] &= ~0x00000010u;
+}
 inline void SendMessageRequest::clear_topic() {
   topic_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_topic();
 }
 inline const ::std::string& SendMessageRequest::topic() const {
   // @@protoc_insertion_point(field_get:chat.proto.SendMessageRequest.topic)
   return topic_.GetNoArena();
 }
 inline void SendMessageRequest::set_topic(const ::std::string& value) {
-  
+  set_has_topic();
   topic_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:chat.proto.SendMessageRequest.topic)
 }
 #if LANG_CXX11
 inline void SendMessageRequest::set_topic(::std::string&& value) {
-  
+  set_has_topic();
   topic_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:chat.proto.SendMessageRequest.topic)
@@ -692,31 +804,34 @@ inline void SendMessageRequest::set_topic(::std::string&& value) {
 #endif
 inline void SendMessageRequest::set_topic(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+  set_has_topic();
   topic_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:chat.proto.SendMessageRequest.topic)
 }
 inline void SendMessageRequest::set_topic(const char* value, size_t size) {
-  
+  set_has_topic();
   topic_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:chat.proto.SendMessageRequest.topic)
 }
 inline ::std::string* SendMessageRequest::mutable_topic() {
-  
+  set_has_topic();
   // @@protoc_insertion_point(field_mutable:chat.proto.SendMessageRequest.topic)
   return topic_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* SendMessageRequest::release_topic() {
   // @@protoc_insertion_point(field_release:chat.proto.SendMessageRequest.topic)
-  
-  return topic_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (!has_topic()) {
+    return NULL;
+  }
+  clear_has_topic();
+  return topic_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void SendMessageRequest::set_allocated_topic(::std::string* topic) {
   if (topic != NULL) {
-    
+    set_has_topic();
   } else {
-    
+    clear_has_topic();
   }
   topic_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), topic);
   // @@protoc_insertion_point(field_set_allocated:chat.proto.SendMessageRequest.topic)
@@ -726,36 +841,56 @@ inline void SendMessageRequest::set_allocated_topic(::std::string* topic) {
 
 // SendMessageResponse
 
-// int32 err_code = 1;
+// required int32 err_code = 1;
+inline bool SendMessageResponse::has_err_code() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void SendMessageResponse::set_has_err_code() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void SendMessageResponse::clear_has_err_code() {
+  _has_bits_[0] &= ~0x00000010u;
+}
 inline void SendMessageResponse::clear_err_code() {
   err_code_ = 0;
+  clear_has_err_code();
 }
 inline ::google::protobuf::int32 SendMessageResponse::err_code() const {
   // @@protoc_insertion_point(field_get:chat.proto.SendMessageResponse.err_code)
   return err_code_;
 }
 inline void SendMessageResponse::set_err_code(::google::protobuf::int32 value) {
-  
+  set_has_err_code();
   err_code_ = value;
   // @@protoc_insertion_point(field_set:chat.proto.SendMessageResponse.err_code)
 }
 
-// string err_msg = 2;
+// required string err_msg = 2;
+inline bool SendMessageResponse::has_err_msg() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void SendMessageResponse::set_has_err_msg() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void SendMessageResponse::clear_has_err_msg() {
+  _has_bits_[0] &= ~0x00000001u;
+}
 inline void SendMessageResponse::clear_err_msg() {
   err_msg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_err_msg();
 }
 inline const ::std::string& SendMessageResponse::err_msg() const {
   // @@protoc_insertion_point(field_get:chat.proto.SendMessageResponse.err_msg)
   return err_msg_.GetNoArena();
 }
 inline void SendMessageResponse::set_err_msg(const ::std::string& value) {
-  
+  set_has_err_msg();
   err_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:chat.proto.SendMessageResponse.err_msg)
 }
 #if LANG_CXX11
 inline void SendMessageResponse::set_err_msg(::std::string&& value) {
-  
+  set_has_err_msg();
   err_msg_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:chat.proto.SendMessageResponse.err_msg)
@@ -763,52 +898,65 @@ inline void SendMessageResponse::set_err_msg(::std::string&& value) {
 #endif
 inline void SendMessageResponse::set_err_msg(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+  set_has_err_msg();
   err_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:chat.proto.SendMessageResponse.err_msg)
 }
 inline void SendMessageResponse::set_err_msg(const char* value, size_t size) {
-  
+  set_has_err_msg();
   err_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:chat.proto.SendMessageResponse.err_msg)
 }
 inline ::std::string* SendMessageResponse::mutable_err_msg() {
-  
+  set_has_err_msg();
   // @@protoc_insertion_point(field_mutable:chat.proto.SendMessageResponse.err_msg)
   return err_msg_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* SendMessageResponse::release_err_msg() {
   // @@protoc_insertion_point(field_release:chat.proto.SendMessageResponse.err_msg)
-  
-  return err_msg_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (!has_err_msg()) {
+    return NULL;
+  }
+  clear_has_err_msg();
+  return err_msg_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void SendMessageResponse::set_allocated_err_msg(::std::string* err_msg) {
   if (err_msg != NULL) {
-    
+    set_has_err_msg();
   } else {
-    
+    clear_has_err_msg();
   }
   err_msg_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), err_msg);
   // @@protoc_insertion_point(field_set_allocated:chat.proto.SendMessageResponse.err_msg)
 }
 
-// string from = 3;
+// required string from = 3;
+inline bool SendMessageResponse::has_from() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void SendMessageResponse::set_has_from() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void SendMessageResponse::clear_has_from() {
+  _has_bits_[0] &= ~0x00000002u;
+}
 inline void SendMessageResponse::clear_from() {
   from_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_from();
 }
 inline const ::std::string& SendMessageResponse::from() const {
   // @@protoc_insertion_point(field_get:chat.proto.SendMessageResponse.from)
   return from_.GetNoArena();
 }
 inline void SendMessageResponse::set_from(const ::std::string& value) {
-  
+  set_has_from();
   from_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:chat.proto.SendMessageResponse.from)
 }
 #if LANG_CXX11
 inline void SendMessageResponse::set_from(::std::string&& value) {
-  
+  set_has_from();
   from_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:chat.proto.SendMessageResponse.from)
@@ -816,52 +964,65 @@ inline void SendMessageResponse::set_from(::std::string&& value) {
 #endif
 inline void SendMessageResponse::set_from(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+  set_has_from();
   from_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:chat.proto.SendMessageResponse.from)
 }
 inline void SendMessageResponse::set_from(const char* value, size_t size) {
-  
+  set_has_from();
   from_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:chat.proto.SendMessageResponse.from)
 }
 inline ::std::string* SendMessageResponse::mutable_from() {
-  
+  set_has_from();
   // @@protoc_insertion_point(field_mutable:chat.proto.SendMessageResponse.from)
   return from_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* SendMessageResponse::release_from() {
   // @@protoc_insertion_point(field_release:chat.proto.SendMessageResponse.from)
-  
-  return from_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (!has_from()) {
+    return NULL;
+  }
+  clear_has_from();
+  return from_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void SendMessageResponse::set_allocated_from(::std::string* from) {
   if (from != NULL) {
-    
+    set_has_from();
   } else {
-    
+    clear_has_from();
   }
   from_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from);
   // @@protoc_insertion_point(field_set_allocated:chat.proto.SendMessageResponse.from)
 }
 
-// string text = 4;
+// required string text = 4;
+inline bool SendMessageResponse::has_text() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void SendMessageResponse::set_has_text() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void SendMessageResponse::clear_has_text() {
+  _has_bits_[0] &= ~0x00000004u;
+}
 inline void SendMessageResponse::clear_text() {
   text_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_text();
 }
 inline const ::std::string& SendMessageResponse::text() const {
   // @@protoc_insertion_point(field_get:chat.proto.SendMessageResponse.text)
   return text_.GetNoArena();
 }
 inline void SendMessageResponse::set_text(const ::std::string& value) {
-  
+  set_has_text();
   text_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:chat.proto.SendMessageResponse.text)
 }
 #if LANG_CXX11
 inline void SendMessageResponse::set_text(::std::string&& value) {
-  
+  set_has_text();
   text_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:chat.proto.SendMessageResponse.text)
@@ -869,52 +1030,65 @@ inline void SendMessageResponse::set_text(::std::string&& value) {
 #endif
 inline void SendMessageResponse::set_text(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+  set_has_text();
   text_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:chat.proto.SendMessageResponse.text)
 }
 inline void SendMessageResponse::set_text(const char* value, size_t size) {
-  
+  set_has_text();
   text_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:chat.proto.SendMessageResponse.text)
 }
 inline ::std::string* SendMessageResponse::mutable_text() {
-  
+  set_has_text();
   // @@protoc_insertion_point(field_mutable:chat.proto.SendMessageResponse.text)
   return text_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* SendMessageResponse::release_text() {
   // @@protoc_insertion_point(field_release:chat.proto.SendMessageResponse.text)
-  
-  return text_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (!has_text()) {
+    return NULL;
+  }
+  clear_has_text();
+  return text_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void SendMessageResponse::set_allocated_text(::std::string* text) {
   if (text != NULL) {
-    
+    set_has_text();
   } else {
-    
+    clear_has_text();
   }
   text_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), text);
   // @@protoc_insertion_point(field_set_allocated:chat.proto.SendMessageResponse.text)
 }
 
-// string topic = 5;
+// required string topic = 5;
+inline bool SendMessageResponse::has_topic() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void SendMessageResponse::set_has_topic() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void SendMessageResponse::clear_has_topic() {
+  _has_bits_[0] &= ~0x00000008u;
+}
 inline void SendMessageResponse::clear_topic() {
   topic_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_topic();
 }
 inline const ::std::string& SendMessageResponse::topic() const {
   // @@protoc_insertion_point(field_get:chat.proto.SendMessageResponse.topic)
   return topic_.GetNoArena();
 }
 inline void SendMessageResponse::set_topic(const ::std::string& value) {
-  
+  set_has_topic();
   topic_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:chat.proto.SendMessageResponse.topic)
 }
 #if LANG_CXX11
 inline void SendMessageResponse::set_topic(::std::string&& value) {
-  
+  set_has_topic();
   topic_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:chat.proto.SendMessageResponse.topic)
@@ -922,31 +1096,34 @@ inline void SendMessageResponse::set_topic(::std::string&& value) {
 #endif
 inline void SendMessageResponse::set_topic(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+  set_has_topic();
   topic_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:chat.proto.SendMessageResponse.topic)
 }
 inline void SendMessageResponse::set_topic(const char* value, size_t size) {
-  
+  set_has_topic();
   topic_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:chat.proto.SendMessageResponse.topic)
 }
 inline ::std::string* SendMessageResponse::mutable_topic() {
-  
+  set_has_topic();
   // @@protoc_insertion_point(field_mutable:chat.proto.SendMessageResponse.topic)
   return topic_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* SendMessageResponse::release_topic() {
   // @@protoc_insertion_point(field_release:chat.proto.SendMessageResponse.topic)
-  
-  return topic_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (!has_topic()) {
+    return NULL;
+  }
+  clear_has_topic();
+  return topic_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void SendMessageResponse::set_allocated_topic(::std::string* topic) {
   if (topic != NULL) {
-    
+    set_has_topic();
   } else {
-    
+    clear_has_topic();
   }
   topic_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), topic);
   // @@protoc_insertion_point(field_set_allocated:chat.proto.SendMessageResponse.topic)

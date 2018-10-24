@@ -1,8 +1,8 @@
-syntax = "proto3";
+syntax = "proto2";
 package chat.proto;
 
 message MessagePush {
-    string topic = 1;
-    string content = 2;
-    string from = 3;
+    required string topic = 1;
+    required string content = 2;
+    required string from = 3;
 }
