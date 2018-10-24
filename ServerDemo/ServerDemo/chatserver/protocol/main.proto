@@ -1,8 +1,8 @@
-syntax = "proto3";
+syntax = "proto2";
 package proto;
 
-
 enum CmdID {
+    CMD_ID_INVALID = -1;
     CMD_ID_UNKNOWN = 0;
     CMD_ID_HELLO = 1;
     CMD_ID_AUTH = 2;
@@ -13,20 +13,20 @@ enum CmdID {
 }
 
 message HelloRequest {
-    string user = 1;
-    string text = 2;
+    required string user = 1;
+    required string text = 2;
 }
 
 
 message HelloResponse {
-    int32 retcode = 1;
-    string errmsg = 2;
+    required int32 retcode = 1;
+    optional string errmsg = 2;
 }
 
 message Conversation {
-    string topic = 1;
-    string notice = 2;
-    string name = 3;
+    required string topic = 1;
+    required string notice = 2;
+    required string name = 3;
 }
 
 message ConversationListRequest {
@@ -38,8 +38,8 @@ message ConversationListRequest {
         HOT = 4;
     }
 
-    string access_token = 1;
-    int32 type = 2;
+    required string access_token = 1;
+    required int32 type = 2;
 }
 
 message ConversationListResponse {
