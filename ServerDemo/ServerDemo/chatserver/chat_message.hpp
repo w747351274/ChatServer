@@ -23,11 +23,11 @@ static int CLIENTVERSION = 200;
 static int MESSAGE_PUSH = 10001;
 
 struct __STNetMsgXpHeader {
-    uint32_t    head_length;
-    uint32_t    client_version;
-    uint32_t    cmdid;
-    uint32_t    seq;
-    uint32_t    body_length;
+    uint32_t head_length;
+    uint32_t client_version;
+    uint32_t cmdid;
+    uint32_t seq;
+    uint32_t body_length;
 };
 
 class chat_message {
@@ -91,21 +91,16 @@ public:
         headLength_ = headLength;
     }
     
-    
     bool decode_header() {
-        
-            __STNetMsgXpHeader st = {0};
-        
+        __STNetMsgXpHeader st = {0};
         memcpy(&st, data_, sizeof(__STNetMsgXpHeader));
-        
         headLength_ = ntohl(st.head_length);
         clientVersion_ = ntohl(st.client_version);
         cmdId_ = ntohl(st.cmdid);
         seq_ = ntohl(st.seq);
         body_length_ = ntohl(st.body_length);
-  
+        
         std::cout << "headLength_ :"   << headLength_ << " clientVersion_:"  << clientVersion_  << " cmdId_:"  << cmdId_ << " seq_:" << seq_  << " bodyLenth_:" << body_length_ << std::endl;
- 
         return true;
     }
     
