@@ -21,6 +21,7 @@ static int CMDID_NOOPING = 6;
 static int CMDID_NOOPING_RESP = 6;
 static int CLIENTVERSION = 200;
 static int MESSAGE_PUSH = 10001;
+#define PUSH_DATA_TASKID 0
 
 struct __STNetMsgXpHeader {
     uint32_t head_length;

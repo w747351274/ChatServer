@@ -18,6 +18,7 @@
 #include "chat_message.hpp"
 #include "chat.pb.h"
 #include "main.pb.h"
+#include "messagepush.pb.h"
 
 using namespace chat::proto;
 using boost::asio::ip::tcp;
@@ -50,13 +51,16 @@ public:
         participants_.erase(participant);
     }
     
-    void deliver(const chat_message& msg){
+    void push(const chat_message& msg , chat_participant_ptr participant){
         recent_msgs_.push_back(msg);
         while (recent_msgs_.size() > max_recent_msgs)
             recent_msgs_.pop_front();
         
-        for (auto participant: participants_)
-            participant->deliver(msg);
+        for (auto participant_: participants_){
+            if (participant_ != participant) {
+                participant_->deliver(msg);
+            }
+        }
     }
     
 private:
@@ -142,7 +146,24 @@ private:
                                         read_msg_.body_length(res.length());
                                         read_msg_.encode_header();
                                         std::memcpy(read_msg_.body(), res.c_str(), read_msg_.body_length());
-                                        room_.deliver(read_msg_);
+                                        boost::asio::async_write(socket_, boost::asio::buffer(read_msg_.data(), read_msg_.length()) ,
+                                                                 [this,self](boost::system::error_code error , size_t){
+                                                                 });
+                                        std::thread threadPush([this,self,&response](){
+                                            MessagePush message_push;
+                                            message_push.set_topic(response.topic());
+                                            message_push.set_from(response.from());
+                                            message_push.set_content(response.text());
+                                            std::string resMessage = message_push.SerializeAsString();
+                                            chat_message chatMsg;
+                                            std::memcpy(chatMsg.body(), resMessage.c_str(), resMessage.length());
+                                            chatMsg.cmdId(MESSAGE_PUSH);
+                                            chatMsg.seq(PUSH_DATA_TASKID);
+                                            chatMsg.body_length(resMessage.length());
+                                            chatMsg.encode_header();
+                                            room_.push(chatMsg,self);
+                                        });
+                                        threadPush.join();
                                         do_read_header();
                                     } else {
                                         room_.leave(shared_from_this());
@@ -169,8 +190,13 @@ private:
                                         read_msg_.body_length(res.length());
                                         read_msg_.encode_header();
                                         std::memcpy(read_msg_.body(), res.c_str(), read_msg_.body_length());
-                                        room_.deliver(read_msg_);
-                                        do_read_header();
+                                        boost::asio::async_write(socket_, boost::asio::buffer(read_msg_.data(),read_msg_.length()), [this, self](boost::system::error_code err,size_t){
+                                            if (!err) {
+                                                do_read_header();
+                                            }else{
+                                                room_.leave(shared_from_this());
+                                            }
+                                        });
                                     } else {
                                         room_.leave(shared_from_this());
                                     }
@@ -196,7 +222,13 @@ private:
                                         read_msg_.body_length(res.length());
                                         read_msg_.encode_header();
                                         std::memcpy(read_msg_.body(), res.c_str(), read_msg_.body_length());
-                                        room_.deliver(read_msg_);
+                                        boost::asio::async_write(socket_, boost::asio::buffer(read_msg_.data(),read_msg_.length()), [this, self](boost::system::error_code err,size_t){
+                                            if (!err) {
+                                                do_read_header();
+                                            }else{
+                                                room_.leave(shared_from_this());
+                                            }
+                                        });
                                         do_read_header();
                                     } else {
                                         room_.leave(shared_from_this());
