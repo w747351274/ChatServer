@@ -20,12 +20,17 @@ void conversation_list_cgi::handle_request(const http::server::request& req, htt
     proto::Conversation* conversion = list.add_list();
     conversion -> set_name("wjl");
     conversion -> set_topic("topic");
-    conversion -> set_notice("111");
+    conversion -> set_notice("cpp");
+    
+    proto::Conversation* conversion2 = list.add_list();
+    conversion2 -> set_name("wjl2");
+    conversion2 -> set_topic("topic2");
+    conversion2 -> set_notice("lua");
     
     rep.content.append(list.SerializeAsString());
     rep.headers.resize(2);
     rep.headers[0].name = "Content-Length";
     rep.headers[0].value = std::to_string(rep.content.size());
     rep.headers[1].name = "Content-Type";
-    rep.headers[1].value =  "text/html";
+    rep.headers[1].value =  "text/plain";
 }

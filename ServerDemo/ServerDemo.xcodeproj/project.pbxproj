@@ -31,6 +31,8 @@
 		BA3211D72168E06B00C2BE79 /* chatServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA3211D52168E06B00C2BE79 /* chatServer.cpp */; };
 		BA32B052216CF75C00A4D204 /* chat.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = BA32AFE2216CF75C00A4D204 /* chat.pb.cc */; };
 		BA32B053216CF75C00A4D204 /* chat.proto in Sources */ = {isa = PBXBuildFile; fileRef = BA32AFE4216CF75C00A4D204 /* chat.proto */; };
+		BA74CDFC2183645A001D2BBD /* chat_room.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA74CDFA2183645A001D2BBD /* chat_room.cpp */; };
+		BA74CDFF218364AB001D2BBD /* chat_session.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA74CDFD218364AB001D2BBD /* chat_session.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -93,6 +95,11 @@
 		BA32AFE2216CF75C00A4D204 /* chat.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chat.pb.cc; sourceTree = "<group>"; };
 		BA32AFE3216CF75C00A4D204 /* chat.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chat.pb.h; sourceTree = "<group>"; };
 		BA32AFE4216CF75C00A4D204 /* chat.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = chat.proto; sourceTree = "<group>"; };
+		BA74CDF92183640F001D2BBD /* i_chat_participant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = i_chat_participant.h; sourceTree = "<group>"; };
+		BA74CDFA2183645A001D2BBD /* chat_room.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = chat_room.cpp; sourceTree = "<group>"; };
+		BA74CDFB2183645A001D2BBD /* chat_room.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = chat_room.hpp; sourceTree = "<group>"; };
+		BA74CDFD218364AB001D2BBD /* chat_session.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = chat_session.cpp; sourceTree = "<group>"; };
+		BA74CDFE218364AB001D2BBD /* chat_session.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = chat_session.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +195,11 @@
 				BA3211E0216913DF00C2BE79 /* chat_message.hpp */,
 				BA3211D52168E06B00C2BE79 /* chatServer.cpp */,
 				BA3211D62168E06B00C2BE79 /* chatServer.hpp */,
+				BA74CDF92183640F001D2BBD /* i_chat_participant.h */,
+				BA74CDFA2183645A001D2BBD /* chat_room.cpp */,
+				BA74CDFB2183645A001D2BBD /* chat_room.hpp */,
+				BA74CDFD218364AB001D2BBD /* chat_session.cpp */,
+				BA74CDFE218364AB001D2BBD /* chat_session.hpp */,
 			);
 			path = chatserver;
 			sourceTree = "<group>";
@@ -283,12 +295,14 @@
 				BA06F43D217B6F5B002E38C2 /* main.pb.cc in Sources */,
 				BA320EDB2166E4E600C2BE79 /* Printer.cpp in Sources */,
 				BA320FFD21682B8400C2BE79 /* echo_service.cpp in Sources */,
+				BA74CDFC2183645A001D2BBD /* chat_room.cpp in Sources */,
 				BA06F453217C01D7002E38C2 /* reply.cpp in Sources */,
 				BA06F455217C01D7002E38C2 /* connection.cpp in Sources */,
 				BA06F43A217B6F5B002E38C2 /* messagepush.proto in Sources */,
 				BA06F454217C01D7002E38C2 /* request_handler.cpp in Sources */,
 				BA2275B22164B3ED006E7482 /* main.cpp in Sources */,
 				BA06F451217C01D7002E38C2 /* mime_types.cpp in Sources */,
+				BA74CDFF218364AB001D2BBD /* chat_session.cpp in Sources */,
 				BA06F4B9217CB448002E38C2 /* conversationListCgi.cpp in Sources */,
 				BA06F43B217B6F5B002E38C2 /* messagepush.pb.cc in Sources */,
 				BA320ED321660CFD00C2BE79 /* testEnd.cpp in Sources */,

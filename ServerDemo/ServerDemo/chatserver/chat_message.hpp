@@ -12,10 +12,10 @@
 #define CHAT_MESSAGE_HPP
 
 #include <cstdio>
-#include <cstdlib>
 #include <cstring>
 #include <stdint.h>
 #include <stdlib.h>
+#include <iostream>
 
 static int CMDID_NOOPING = 6;
 static int CMDID_NOOPING_RESP = 6;
